@@ -1,0 +1,12 @@
+<!-- This is a simple list displaying employees with a link to view more details -->
+<div class="employee-list-container">
+    <h2>Employee List</h2>
+    <ul class="employee-list">
+      <li *ngFor="let employee of employees">
+        {{ employee.name }} - {{ employee.position }}
+        <!-- Link to the employee detail page -->
+        <a [routerLink]="['/employee', employee.id]">View Details</a>
+      </li>
+    </ul>
+  </div>
+  
